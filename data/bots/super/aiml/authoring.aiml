@@ -1,0 +1,105 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml>
+    <category>
+        <pattern>_ HELP *</pattern>
+        <template><srai>
+            Hello2, I am happy to assist you today! 
+            Do you need help with any the following: 
+                - Order query
+                - Information about a product
+                - Delivery information 
+            </srai>
+        </template>
+    </category>
+    <category>
+        <pattern>KNOW WHERE MY ORDER IS</pattern>
+        <pattern>WHERE IS MY ORDER</pattern>
+        <template>
+            Okay, I can check that for you, I need your order number in order to do this
+        </template>
+    </category>
+    <category>
+        <pattern>MY ORDER NUMBER IS *</pattern>
+        <template>
+            <srai>
+                It looks like your order
+                <srai />
+            </srai>
+            is still in the store and has not been shipped yet!
+        </template>
+    </category>
+    <category>
+        <pattern>OKAY</pattern>
+        <pattern>RIGHT</pattern>
+        <pattern>NOTED</pattern>
+        <template>
+            <random>
+                <li>Would you like to know anything else?</li>
+                <li>Is there anything else I can help you with?</li>
+            </random>
+            <set name="topic">continue</set>
+        </template>
+    </category>
+    <topic name="continue">
+        <category>
+            <pattern>NO</pattern>
+            <template>
+                Thank you for using customer assistant! Goodbye!
+            </template>
+        </category>
+    </topic>
+    <category>
+        <pattern>HOW MUCH WOULD DELIVERY BE</pattern>
+        <template>
+            Can you give me the name of your location? <set name="topic">location</set>
+        </template>
+    </category>
+    <topic name="location">
+        <category>
+            <pattern>CORK CITY</pattern>
+            <template> Delivery to Cork City will be €4.99</template>
+        </category>
+    </topic>
+    <category>
+        <pattern>DESK</pattern>
+        <template>
+            Looks like you are looking for desks! In stock we have available:
+                - #125863 OAK DESK €200.00
+                - #865452 ANGLED DESK BLACK €350.00
+                - #987451 WOODEN LAPTOP DESK €150.00
+        </template>
+    </category>
+    <category>
+        <pattern>OAK DESK</pattern>
+        <template>
+            Information about product #125863 OAK DESK €200.00
+                - Oak finish
+                - 3 years warranty
+                - Three drawers
+                - Great for students!
+        </template>
+    </category>
+    <category>
+        <pattern>ANGLED DESK BLACK</pattern>
+        <template>
+            Information about product #865452 ANGLED DESK BLACK €350.00
+                - slick black
+                - 4 years warranty
+        </template>
+    </category>
+    <category>
+        <pattern>WOODEN LAPTOP DESK</pattern>
+        <template>
+            Information about product #987451 WOODEN LAPTOP DESK €150.00
+                - varnished wood
+                - 2 years warranty
+        </template>
+    </category>
+    <category>
+        <pattern>CONTACT</pattern>
+        <template>
+            The store contact information is 021456987
+            We are open from MON - SUN 10.00 - 6.00
+        </template>
+    </category>
+</aiml>

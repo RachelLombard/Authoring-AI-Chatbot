@@ -1,0 +1,12 @@
+0,_ HELP *,*,*,<srai>#Newline            Hello2#Comma I am happy to assist you today! #Newline            Do you need help with any the following: #Newline                - Order query#Newline                - Information about a product#Newline                - Delivery information #Newline            </srai>,authoring.aiml
+0,WHERE IS MY ORDER,*,*,Okay#Comma I can check that for you#Comma I need your order number in order to do this,authoring.aiml
+0,MY ORDER NUMBER IS *,*,*,<srai>#Newline                It looks like your order#Newline                <srai/>#Newline            </srai>#Newline            is still in the store and has not been shipped yet!,authoring.aiml
+0,NOTED,*,*,<random>#Newline                <li>Would you like to know anything else?</li>#Newline                <li>Is there anything else I can help you with?</li>#Newline            </random>#Newline            <set name="topic">continue</set>,authoring.aiml
+0,NO,*,CONTINUE,Thank you for using customer assistant! Goodbye!,authoring.aiml
+0,HOW MUCH WOULD DELIVERY BE,*,*,Can you give me the name of your location? <set name="topic">location</set>,authoring.aiml
+0,CORK CITY,*,LOCATION,Delivery to Cork City will be €4.99,authoring.aiml
+0,DESK,*,*,Looks like you are looking for desks! In stock we have available:#Newline                - #125863 OAK DESK €200.00#Newline                - #865452 ANGLED DESK BLACK €350.00#Newline                - #987451 WOODEN LAPTOP DESK €150.00,authoring.aiml
+0,OAK DESK,*,*,Information about product #125863 OAK DESK €200.00#Newline                - Oak finish#Newline                - 3 years warranty#Newline                - Three drawers#Newline                - Great for students!,authoring.aiml
+0,ANGLED DESK BLACK,*,*,Information about product #865452 ANGLED DESK BLACK €350.00#Newline                - slick black#Newline                - 4 years warranty,authoring.aiml
+0,WOODEN LAPTOP DESK,*,*,Information about product #987451 WOODEN LAPTOP DESK €150.00#Newline                - varnished wood#Newline                - 2 years warranty,authoring.aiml
+0,CONTACT,*,*,The store contact information is 021456987#Newline            We are open from MON - SUN 10.00 - 6.00,authoring.aiml
